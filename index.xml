@@ -6,10 +6,19 @@
     <description>Recent content on ymsfd</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 31 Jan 2021 16:19:29 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 31 Jan 2021 17:13:10 +0100</lastBuildDate>
     
 	<atom:link href="http://ymsfd.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>http://ymsfd.github.io/posts/secondpost/</link>
+      <pubDate>Sun, 31 Jan 2021 17:13:10 +0100</pubDate>
+      
+      <guid>http://ymsfd.github.io/posts/secondpost/</guid>
+      <description>this is another test&amp;hellip;</description>
+    </item>
     
     <item>
       <title>hello hugo</title>
