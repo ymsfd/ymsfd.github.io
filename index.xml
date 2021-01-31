@@ -6,10 +6,19 @@
     <description>Recent content on ymsfd</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 31 Jan 2021 17:13:10 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 31 Jan 2021 17:34:28 +0100</lastBuildDate>
     
 	<atom:link href="http://ymsfd.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dimension varying when loading pretrained model</title>
+      <link>http://ymsfd.github.io/posts/dimension-error/</link>
+      <pubDate>Sun, 31 Jan 2021 17:34:28 +0100</pubDate>
+      
+      <guid>http://ymsfd.github.io/posts/dimension-error/</guid>
+      <description> seq2seq model, load data with torchtext Field, TabularData.. when loading the saved model got the error of varying dimension inside of layer. The total vocabulary size is changing everytime by loading. stuck reason: thought it is the model problem or data been randomly shufftled when loading real problem: data is saved in .csv file, and inside of data there are also commas, therefore, the data is incorrectly read.  </description>
+    </item>
     
     <item>
       <title>second post</title>
