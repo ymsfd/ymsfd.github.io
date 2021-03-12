@@ -6,10 +6,19 @@
     <description>Recent content on ymsfd</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 31 Jan 2021 17:34:28 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 12 Mar 2021 15:42:08 +0100</lastBuildDate>
     
 	<atom:link href="http://ymsfd.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>willpower against pressure</title>
+      <link>http://ymsfd.github.io/posts/willpower/</link>
+      <pubDate>Fri, 12 Mar 2021 15:42:08 +0100</pubDate>
+      
+      <guid>http://ymsfd.github.io/posts/willpower/</guid>
+      <description>Willpower and pressure are enemy.</description>
+    </item>
     
     <item>
       <title>Dimension varying when loading pretrained model</title>
