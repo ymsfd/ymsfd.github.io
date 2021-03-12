@@ -129,15 +129,6 @@ Follow the following steps:</description>
     </item>
     
     <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>http://ymsfd.github.io/posts/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://ymsfd.github.io/posts/migrate-from-jekyll/</guid>
-      <description>Table of Contents     Move static content to static Create your Hugo configuration file Set your configuration publish folder to site Convert Jekyll templates to Hugo templates Convert Jekyll plugins to Hugo shortcodes  Implementation Usage   Finishing Touches  Fix Content Clean Up   A practical example in a diff  Move static content to static    Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output.</description>
-    </item>
-    
-    <item>
       <title></title>
       <link>http://ymsfd.github.io/posts/urgently-need-output/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
