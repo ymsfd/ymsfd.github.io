@@ -10,32 +10,5 @@
 	<atom:link href="http://ymsfd.github.io/pt-br/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Contato</title>
-      <link>http://ymsfd.github.io/pt-br/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ymsfd.github.io/pt-br/contact/</guid>
-      <description>Me siga em @joaoninguem.</description>
-    </item>
-    
-    <item>
-      <title>Projetos</title>
-      <link>http://ymsfd.github.io/pt-br/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ymsfd.github.io/pt-br/projects/</guid>
-      <description>Em construção&amp;hellip; Aguarde!</description>
-    </item>
-    
-    <item>
-      <title>Sobre Hugo</title>
-      <link>http://ymsfd.github.io/pt-br/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ymsfd.github.io/pt-br/about/</guid>
-      <description>Em construção&amp;hellip; Aguarde!</description>
-    </item>
-    
   </channel>
 </rss>

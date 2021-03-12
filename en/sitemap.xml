@@ -89,16 +89,6 @@
   
   <url>
     <loc>http://ymsfd.github.io/about/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://ymsfd.github.io/pt-br/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://ymsfd.github.io/about/"
-                />
   </url>
   
   <url>
@@ -117,16 +107,6 @@
   
   <url>
     <loc>http://ymsfd.github.io/contact/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://ymsfd.github.io/pt-br/contact/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://ymsfd.github.io/contact/"
-                />
   </url>
   
   <url>
@@ -135,16 +115,6 @@
   
   <url>
     <loc>http://ymsfd.github.io/projects/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://ymsfd.github.io/pt-br/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://ymsfd.github.io/projects/"
-                />
   </url>
   
   <url>
