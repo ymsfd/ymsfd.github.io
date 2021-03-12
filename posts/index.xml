@@ -41,22 +41,12 @@
     </item>
     
     <item>
-      <title>hello hugo</title>
+      <title>more thinking and writing</title>
       <link>http://ymsfd.github.io/posts/urgently-need-output/</link>
       <pubDate>Sun, 31 Jan 2021 16:19:29 +0100</pubDate>
       
       <guid>http://ymsfd.github.io/posts/urgently-need-output/</guid>
       <description>I realized I could not write anymore, I read too much and too fast that I did not leave time for thinking. This is a disaster for my brain, and for my till now still not finished report which supposed to be finished one year ago. Because I forgot how to write, how to output thoughts, and the longer the delay, the more my brain refuse to think, refuse to start from any single tiny step.</description>
-    </item>
-    
-    <item>
-      <title>Creating a New Theme</title>
-      <link>http://ymsfd.github.io/posts/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://ymsfd.github.io/posts/creating-a-new-theme/</guid>
-      <description>Introduction    This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
     
   </channel>

@@ -6,28 +6,9 @@
     <description>Recent content in Series on ymsfd</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://ymsfd.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Hugo</title>
-      <link>http://ymsfd.github.io/series/hugo/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://ymsfd.github.io/series/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Theme</title>
-      <link>http://ymsfd.github.io/series/theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://ymsfd.github.io/series/theme/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
