@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com; prefetch-src 'self';">
+    
+
+    <meta name="author" content="ymsfd">
+    <meta name="description" content="Textual similarity calculation is an important NLP tasks with a lot of application, for example, search engine, question answering system. Generally this tasks can be decomposed into three subtasks:
+ Text cleaning Vector representation Distance metrics  Text Cleaning    Text cleaning typically includes:
+ lower case all words reomve special symbols (remove digit) remove stopwords (customize stopwords) stemming/lemme &hellip;  import re import nltk from nltk.corpus import stopwords def clean(text): lowered = [i.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Compare text similarity"/>
+<meta name="twitter:description" content="Textual similarity calculation is an important NLP tasks with a lot of application, for example, search engine, question answering system. Generally this tasks can be decomposed into three subtasks:
+ Text cleaning Vector representation Distance metrics  Text Cleaning    Text cleaning typically includes:
+ lower case all words reomve special symbols (remove digit) remove stopwords (customize stopwords) stemming/lemme &hellip;  import re import nltk from nltk.corpus import stopwords def clean(text): lowered = [i."/>
+
+    <meta property="og:title" content="Compare text similarity" />
+<meta property="og:description" content="Textual similarity calculation is an important NLP tasks with a lot of application, for example, search engine, question answering system. Generally this tasks can be decomposed into three subtasks:
+ Text cleaning Vector representation Distance metrics  Text Cleaning    Text cleaning typically includes:
+ lower case all words reomve special symbols (remove digit) remove stopwords (customize stopwords) stemming/lemme &hellip;  import re import nltk from nltk.corpus import stopwords def clean(text): lowered = [i." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://ymsfd.github.io/posts/text-similarity/" />
+<meta property="article:published_time" content="2021-03-12T18:16:59+01:00" />
+<meta property="article:modified_time" content="2021-03-12T18:16:59+01:00" />
+
+
+    <title>
+  Compare text similarity · ymsfd
+</title>
+
+    
+      <link rel="canonical" href="http://ymsfd.github.io/posts/text-similarity/">
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.1.7" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.f48a4da9bd32cecaff90717ae85529411dd087c10fc0dfca9c9c329c7327e5e1.css" integrity="sha256-9IpNqb0yzsr/kHF66FUpQR3Qh8EPwN/KnJwynHMn5eE=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.89c82b6022b96f77aeb521b240daec4f87ea029d84d1c78b8acd0735b91b3c92.css" integrity="sha256-icgrYCK5b3eutSGyQNrsT4fqAp2E0ceLis0HNbkbPJI=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+      <script defer src="https://twemoji.maxcdn.com/v/13.0.1/twemoji.min.js"
+        integrity="sha384-5f4X0lBluNY/Ib4VhGx0Pf6iDCF99VGXJIyYy7dDLY5QlEd7Ap0hICSSZA1XYbc4" crossorigin="anonymous"></script>
+    
+
+    <meta name="generator" content="Hugo 0.74.3" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto"
+        onload=" twemoji.parse(document.body); "
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      ymsfd
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="http://ymsfd.github.io/pt-br/">CN</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://ymsfd.github.io/posts/text-similarity/">
+              Compare text similarity
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2021-03-12T18:16:59&#43;01:00'>
+                March 12, 2021
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <p>Textual similarity calculation is an important NLP tasks with a lot of application, for example, search engine, question answering system.
+Generally this tasks can be decomposed into three subtasks:</p>
+<ul>
+<li>Text cleaning</li>
+<li>Vector representation</li>
+<li>Distance metrics</li>
+</ul>
+<h1 id="text-cleaning">
+  Text Cleaning
+  <a class="heading-link" href="#text-cleaning">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>Text cleaning typically includes:</p>
+<ul>
+<li>lower case all words</li>
+<li>reomve special symbols (remove digit)</li>
+<li>remove stopwords (customize stopwords)</li>
+<li>stemming/lemme</li>
+<li>&hellip;</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import re
+import nltk
+from nltk.corpus import stopwords
+
+def clean(text):
+    lowered = [i.lower() for i in text]
+    no_digit = [re.sub(&#34; \d+&#34;, &#34; &#34;, tok) for tok in lowered]
+    tokens = [nltk.word_tokenize(i) for i in no_digit]
+    stop_word = stopwords.words(&#39;english&#39;)
+    exception = [&#39;on&#39;, &#39;off&#39;]
+    stop_words = [w for w in stop_word if w not in exception]
+    stop_words.extend([&#39;?&#39;, &#39;!&#39;, &#39;/&#39;])
+    cleaned = [[w for w in s if w not in stop_words] for s in tokens]
+    cleaned = [&#34; &#34;.join(sublist) for sublist in cleaned]
+    return cleaned
+</code></pre></div><h1 id="vector-representations">
+  Vector Representations
+  <a class="heading-link" href="#vector-representations">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>Classical text to numerical features transformations are count-based (statistical approach), e.g., Bag-of-Words model and TFIDF. But the statistical
+approaches do not take the semantics of words into consideration (synonoms are not closer as they should).
+State-of-the-art pretrained language model based text feature representation can grasp the semantical similarity of the text data.</p>
+<h2 id="bow-baseline">
+  BoW (baseline)
+  <a class="heading-link" href="#bow-baseline">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import pandas as pd
+from sklearn.feature_extraction.text import CountVectorizer
+
+df = pd.read_csv(&#39;filename.tsv&#39;, encoding=&#39;utf8&#39;, sep=&#39;\t&#39;)
+bow = CountVectorizer()
+X = bow.fit_transform(df[&#39;nl&#39;])
+</code></pre></div><h2 id="tfidf">
+  TFIDF
+  <a class="heading-link" href="#tfidf">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+df = pd.read_csv(&#39;filename.tsv&#39;, encoding=&#39;utf8&#39;, sep=&#39;\t&#39;)
+tfidf = TfidfVectorizer(analyzer=&#39;word&#39;)
+TV = tfidf.fit_transform(df[&#39;nl&#39;])
+TV = TV.toarray()
+y = df[&#39;label&#39;]
+</code></pre></div><h2 id="fasttext">
+  Fasttext
+  <a class="heading-link" href="#fasttext">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import fasttext
+
+fasttext.FastText.eprint = lambda x: None
+fasttext.util.download_model(&#39;en&#39;, if_exists=&#39;ignore&#39;)
+ft = fasttext.load_model(&#39;cc.en.300.bin&#39;)
+print(len(ft[&#39;king&#39;]))
+print(ft.get_sentence_vector(&#34;how are you today&#34;))
+</code></pre></div><h2 id="word2vec">
+  Word2Vec
+  <a class="heading-link" href="#word2vec">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">from gensim.models.keyedvectors import KeyedVectors
+
+model = KeyedVectors.load_word2vec_format(&#39;GoogleNews-vectors-negative300.bin&#39;, binary=True, norm_only=True)
+
+
+def average_sentence(sentence, wv):
+    v = np.zeros(300)
+    for w in sentence:
+        if w in wv:
+            v += wv[w]
+    return v / len(sentence)
+
+</code></pre></div><h2 id="transformer-encoder">
+  Transformer Encoder
+  <a class="heading-link" href="#transformer-encoder">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">from sentence_transformers import SentenceTransformer
+
+sbert_model = SentenceTransformer(&#39;bert-base-nli-mean-tokens&#39;)
+sentence_embeddings = model.encode(sentences) # sentences is a list of string sentence (tp list)
+print(&#39;Sample BERT embedding vector - length&#39;, len(sentence_embeddings[0]))
+print(&#39;Sample BERT embedding vector - note includes negative values&#39;, sentence_embeddings[0])
+query = &#34;I hate oliver&#34;
+query_vec = model.encode([query])[0]
+
+
+df = pd.read_csv(&#34;filename.tsv&#34;, sep=&#34;\t&#34;, names=[&#34;col1&#34;,&#34;col2 &#34;])
+col1 = df0[&#34;col1&#34;].to_list()
+scores = []
+
+for example in col1:
+  sim = cosine(query_vec, model.encode([example])[0])
+  scores.append(sim)
+  
+import numpy as np
+top5 = np.argsort(scores)[-5:]
+top5_match = [tp[i] for i in top5]
+</code></pre></div><h1 id="distance-metrics">
+  Distance Metrics
+  <a class="heading-link" href="#distance-metrics">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>After the text being vectorized, we can compute the distance/similarity based on the following metrics.</p>
+<h2 id="cosine-distance">
+  Cosine Distance
+  <a class="heading-link" href="#cosine-distance">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">def cosine_similarity(u, v):
+    sim = 1 - np.dot(u, v) / (np.linalg.norm(u) * np.linalg.norm(v))
+    return sim
+</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">from gensim.models.keyedvectors import KeyedVectors
+# I found out that the n_similarity from gensim library also based on cosine similarity, not sure if result in the same as manually calculated..
+model = KeyedVectors.load_word2vec_format(&#39;GoogleNews-vectors-negative300.bin&#39;, binary=True, norm_only=True)
+model.n_similarity([&#39;sushi&#39;, &#39;shop&#39;], [&#39;japanese&#39;, &#39;restaurant&#39;])
+</code></pre></div><h2 id="jaccard-similarity-x-n-yx-u-y">
+  Jaccard Similarity (X n Y)/(X u Y)
+  <a class="heading-link" href="#jaccard-similarity-x-n-yx-u-y">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">def jaccard_similarity(list1, list2):
+    s1 = set(list1)
+    s2 = set(list2)
+    return float(len(s1.intersection(s2)) / len(s1.union(s2)))
+list1 = [&#39;dog&#39;, &#39;cat&#39;, &#39;cat&#39;, &#39;rat&#39;]
+list2 = [&#39;dog&#39;, &#39;cat&#39;, &#39;mouse&#39;]
+jaccard_similarity(list1, list2)
+</code></pre></div><h2 id="levenshtein-distanceedit-distance">
+  Levenshtein distance/edit distance
+  <a class="heading-link" href="#levenshtein-distanceedit-distance">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import nltk
+nltk.edit_distance(&#34;humpty&#34;, &#34;dumpty&#34;)
+</code></pre></div><h2 id="wmd">
+  WMD
+  <a class="heading-link" href="#wmd">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">from gensim.models import Word2Vec, KeyedVectors
+from gensim.similarities import WmdSimilarity
+from nltk import word_tokenize
+from nltk.corpus import stopwords
+stop_words = stopwords.words(&#39;english&#39;)
+
+
+def preprocess(doc):
+    doc = doc.lower()
+    doc = word_tokenize(doc)
+    doc = [w for w in doc if not w in stop_words]
+    doc = [w for w in doc if w.isalpha()]
+    return doc
+
+
+text1 = &#34;hot dog&#34;
+text2 = &#34;cold cat&#34;
+w2v_corpus = [preprocess(text1)]
+model = KeyedVectors.load_word2vec_format(&#39;&#39;, binary=True, limit=5000)
+model.init_sims(replace=True)
+num_best = 1
+instance = WmdSimilarity(w2v_corpus, model, num_best=num_best)
+query = [preprocess(text2)]
+sims = instance[query]
+similarity = sims[0][1]
+print(&#34;the sentence are &#34;, similarity, &#34;% similar&#34;)
+</code></pre></div>
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+        <p>hello, nice to meet you.</p>
+      
+      
+        ©
+        
+        2021
+         ymsfd 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+        
+        <script src="/js/dark-mode.min.0213e1773e6d1c5a644f847c67a6f8abac49a3776e2976f6008038af8c5b76a1.js"></script>
+      
+    
+
+    
+
+    
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//analytics.example.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'ABCDE');
+fathom('trackPageview');
+</script>
+
+
+    <script async defer data-domain="example.com" src="https://analytics.example.com/js/plausible.js"></script>
+
+
+    <script data-goatcounter="https://code.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+
+    
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "token"}'></script>
+
+
+
+    <script type="application/javascript">
+  var _paq = window._paq = window._paq || [];
+   
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.example.com/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', 'ABCDE']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+  </body>
+
+</html>

@@ -6,10 +6,21 @@
     <description>Recent content in Posts on ymsfd</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 12 Mar 2021 15:42:08 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 12 Mar 2021 18:16:59 +0100</lastBuildDate>
     
 	<atom:link href="http://ymsfd.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Compare text similarity</title>
+      <link>http://ymsfd.github.io/posts/text-similarity/</link>
+      <pubDate>Fri, 12 Mar 2021 18:16:59 +0100</pubDate>
+      
+      <guid>http://ymsfd.github.io/posts/text-similarity/</guid>
+      <description>Textual similarity calculation is an important NLP tasks with a lot of application, for example, search engine, question answering system. Generally this tasks can be decomposed into three subtasks:
+ Text cleaning Vector representation Distance metrics  Text Cleaning    Text cleaning typically includes:
+ lower case all words reomve special symbols (remove digit) remove stopwords (customize stopwords) stemming/lemme &amp;hellip;  import re import nltk from nltk.corpus import stopwords def clean(text): lowered = [i.</description>
+    </item>
     
     <item>
       <title>willpower against pressure</title>
