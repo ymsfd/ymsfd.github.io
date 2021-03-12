@@ -4,7 +4,6 @@
   
   <url>
     <loc>http://ymsfd.github.io/pt-br/authors/</loc>
-    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -18,13 +17,7 @@
   </url>
   
   <url>
-    <loc>http://ymsfd.github.io/pt-br/categories/blog/</loc>
-    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://ymsfd.github.io/pt-br/categories/</loc>
-    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -38,81 +31,6 @@
   </url>
   
   <url>
-    <loc>http://ymsfd.github.io/pt-br/posts/dummy/</loc>
-    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ymsfd.github.io/pt-br/tags/hugo/</loc>
-    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://ymsfd.github.io/tags/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://ymsfd.github.io/pt-br/tags/hugo/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://ymsfd.github.io/pt-br/tags/i18n/</loc>
-    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ymsfd.github.io/pt-br/</loc>
-    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://ymsfd.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://ymsfd.github.io/pt-br/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://ymsfd.github.io/pt-br/posts/</loc>
-    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://ymsfd.github.io/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://ymsfd.github.io/pt-br/posts/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://ymsfd.github.io/pt-br/tags/</loc>
-    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://ymsfd.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://ymsfd.github.io/pt-br/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://ymsfd.github.io/pt-br/authors/translation-test/</loc>
-    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://ymsfd.github.io/pt-br/contact/</loc>
     <xhtml:link
                 rel="alternate"
@@ -123,6 +41,20 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="http://ymsfd.github.io/pt-br/contact/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://ymsfd.github.io/pt-br/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://ymsfd.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://ymsfd.github.io/pt-br/"
                 />
   </url>
   
@@ -165,6 +97,20 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="http://ymsfd.github.io/pt-br/about/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://ymsfd.github.io/pt-br/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://ymsfd.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://ymsfd.github.io/pt-br/tags/"
                 />
   </url>
   
