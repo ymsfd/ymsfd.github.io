@@ -31,20 +31,6 @@
   </url>
   
   <url>
-    <loc>http://ymsfd.github.io/pt-br/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://ymsfd.github.io/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://ymsfd.github.io/pt-br/"
-                />
-  </url>
-  
-  <url>
     <loc>http://ymsfd.github.io/pt-br/series/</loc>
     <xhtml:link
                 rel="alternate"
@@ -69,6 +55,20 @@
                 rel="alternate"
                 hreflang="pt-br"
                 href="http://ymsfd.github.io/pt-br/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://ymsfd.github.io/pt-br/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://ymsfd.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="http://ymsfd.github.io/pt-br/"
                 />
   </url>
   
