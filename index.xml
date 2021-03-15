@@ -6,10 +6,20 @@
     <description>Recent content on ymsfd</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Mar 2021 10:26:27 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 15 Mar 2021 10:36:36 +0100</lastBuildDate>
     
 	<atom:link href="http://ymsfd.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>http://ymsfd.github.io/posts/topics/</link>
+      <pubDate>Mon, 15 Mar 2021 10:36:36 +0100</pubDate>
+      
+      <guid>http://ymsfd.github.io/posts/topics/</guid>
+      <description>Here I list the topics I plan to work on in the near future.
+ install/update ubuntu system Git frequent commands, a cheatsheet for self quick check Wordpress encountered problems and solutions install wordpress in a docker environment comment function in hugo site &amp;hellip;  </description>
+    </item>
     
     <item>
       <title>Building personal blog site using hugo and GitHubPages</title>
@@ -27,7 +37,7 @@
       <pubDate>Mon, 15 Mar 2021 10:22:54 +0100</pubDate>
       
       <guid>http://ymsfd.github.io/posts/setup-ssh-keys-for-multiple-github-accounts/</guid>
-      <description>The problem of managing multiple GitHub accounts came when I have a personal github account for collecting various study resource or my side projects, and I do not want to this personal account for working in a GitHub organization. Also, every push with a identity and password is quite annoying for me. So I set up different SSH keys to easily manage multiple account.
+      <description>The problem of managing multiple GitHub accounts came when I have a personal github account for collecting various study resource or my side projects, and I do not want to use this personal account for working in a GitHub organization. Also, every push with identity and password is quite annoying for me. So I set up different SSH keys to easily manage multiple accounts.
 step 1: go to .ssh folder and generate ssh keys for all your github accounts    cd ~/.</description>
     </item>
     
