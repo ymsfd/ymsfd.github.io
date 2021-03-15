@@ -6,10 +6,30 @@
     <description>Recent content in Posts on ymsfd</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 12 Mar 2021 18:16:59 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 15 Mar 2021 10:26:27 +0100</lastBuildDate>
     
 	<atom:link href="http://ymsfd.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Building personal blog site using hugo and GitHubPages</title>
+      <link>http://ymsfd.github.io/posts/building-personal-blog-using-hugo-and-githubpages/</link>
+      <pubDate>Mon, 15 Mar 2021 10:26:27 +0100</pubDate>
+      
+      <guid>http://ymsfd.github.io/posts/building-personal-blog-using-hugo-and-githubpages/</guid>
+      <description>As a newbie to web frontend knowledge, I want to use the minimum effort to build a working blog to records study output. Thus Hugo plus GitHubPages are the first choice for me to go.
+ OS: Ubuntu 20.10 hugo version: v0.74.3  install hugo in ubuntu    test hugo locally    host on GitHubPages    customize config file/page layout    update new posts    </description>
+    </item>
+    
+    <item>
+      <title>Set SSH keys for multiple GitHub accounts</title>
+      <link>http://ymsfd.github.io/posts/setup-ssh-keys-for-multiple-github-accounts/</link>
+      <pubDate>Mon, 15 Mar 2021 10:22:54 +0100</pubDate>
+      
+      <guid>http://ymsfd.github.io/posts/setup-ssh-keys-for-multiple-github-accounts/</guid>
+      <description>The problem of managing multiple GitHub accounts came when I have a personal github account for collecting various study resource or my side projects, and I do not want to this personal account for working in a GitHub organization. Also, every push with a identity and password is quite annoying for me. So I set up different SSH keys to easily manage multiple account.
+step 1: go to .ssh folder and generate ssh keys for all your github accounts    cd ~/.</description>
+    </item>
     
     <item>
       <title>Compare text similarity</title>
