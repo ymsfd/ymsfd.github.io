@@ -6,13 +6,22 @@
     <description>Recent content in Posts on ymsfd</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Mar 2021 10:36:36 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 16 Mar 2021 14:21:01 +0100</lastBuildDate>
     
 	<atom:link href="http://ymsfd.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>topics to research and write</title>
+      <title>PyTorch Seq2Seq model with attention understanding layer from from </title>
+      <link>http://ymsfd.github.io/posts/pytorch-seq2seq-model-with-attention/</link>
+      <pubDate>Tue, 16 Mar 2021 14:21:01 +0100</pubDate>
+      
+      <guid>http://ymsfd.github.io/posts/pytorch-seq2seq-model-with-attention/</guid>
+      <description>Sequence to sequence model can solve a lot of NLP problems in an end-to-end manner. For example, machine translation</description>
+    </item>
+    
+    <item>
+      <title>List of topics</title>
       <link>http://ymsfd.github.io/posts/topics/</link>
       <pubDate>Mon, 15 Mar 2021 10:36:36 +0100</pubDate>
       

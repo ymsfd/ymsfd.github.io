@@ -10,26 +10,27 @@
     
 
     <meta name="author" content="Watermelon">
-    <meta name="description" content="love water, love melon, love watermelon!">
+    <meta name="description" content="Sequence to sequence model can solve a lot of NLP problems in an end-to-end manner. For example, machine translation">
     <meta name="keywords" content="blog,developer,personal">
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="love water, love melon, love watermelon!"/>
+<meta name="twitter:title" content="PyTorch Seq2Seq model with attention understanding layer from from "/>
+<meta name="twitter:description" content="Sequence to sequence model can solve a lot of NLP problems in an end-to-end manner. For example, machine translation"/>
 
-    <meta property="og:title" content="Posts" />
-<meta property="og:description" content="love water, love melon, love watermelon!" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://ymsfd.github.io/posts/" />
-<meta property="og:updated_time" content="2021-03-16T14:21:01+01:00" />
+    <meta property="og:title" content="PyTorch Seq2Seq model with attention understanding layer from from " />
+<meta property="og:description" content="Sequence to sequence model can solve a lot of NLP problems in an end-to-end manner. For example, machine translation" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://ymsfd.github.io/posts/pytorch-seq2seq-model-with-attention/" />
+<meta property="article:published_time" content="2021-03-16T14:21:01+01:00" />
+<meta property="article:modified_time" content="2021-03-16T14:21:01+01:00" />
 
 
     <title>
-  Posts · ymsfd
+  PyTorch Seq2Seq model with attention understanding layer from from  · ymsfd
 </title>
 
     
-      <link rel="canonical" href="http://ymsfd.github.io/posts/">
+      <link rel="canonical" href="http://ymsfd.github.io/posts/pytorch-seq2seq-model-with-attention/">
     
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -62,7 +63,6 @@
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-    <link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="ymsfd" />
     
       <script defer src="https://twemoji.maxcdn.com/v/13.0.1/twemoji.min.js"
         integrity="sha384-5f4X0lBluNY/Ib4VhGx0Pf6iDCF99VGXJIyYy7dDLY5QlEd7Ap0hICSSZA1XYbc4" crossorigin="anonymous"></script>
@@ -144,54 +144,73 @@
 
       <div class="content">
         
-  <section class="container list">
-    <h1 class="title">
-      <a class="title-link" href="http://ymsfd.github.io/posts/">
-        Posts
-      </a>
-    </h1>
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://ymsfd.github.io/posts/pytorch-seq2seq-model-with-attention/">
+              PyTorch Seq2Seq model with attention understanding layer from from 
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2021-03-16T14:21:01&#43;01:00'>
+                March 16, 2021
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              One-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <p>Sequence to sequence model can solve a lot of NLP problems in an end-to-end manner. For example, machine
+translation</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
     
-    <ul><li>
-  <span class="date">March 16, 2021</span>
-  <a class="title" href="/posts/pytorch-seq2seq-model-with-attention/">PyTorch Seq2Seq model with attention understanding layer from from </a>
-</li>
-<li>
-  <span class="date">March 15, 2021</span>
-  <a class="title" href="/posts/topics/">List of topics</a>
-</li>
-<li>
-  <span class="date">March 15, 2021</span>
-  <a class="title" href="/posts/building-personal-blog-using-hugo-and-githubpages/">Building personal blog site using hugo and GitHubPages</a>
-</li>
-<li>
-  <span class="date">March 15, 2021</span>
-  <a class="title" href="/posts/setup-ssh-keys-for-multiple-github-accounts/">Set SSH keys for multiple GitHub accounts</a>
-</li>
-<li>
-  <span class="date">March 12, 2021</span>
-  <a class="title" href="/posts/text-similarity/">Compare text similarity</a>
-</li>
-<li>
-  <span class="date">March 12, 2021</span>
-  <a class="title" href="/posts/willpower/">willpower against pressure</a>
-</li>
-<li>
-  <span class="date">January 31, 2021</span>
-  <a class="title" href="/posts/dimension-error/">Dimension varying when loading pretrained model</a>
-</li>
-<li>
-  <span class="date">January 31, 2021</span>
-  <a class="title" href="/posts/urgently-need-output/">more thinking and writing</a>
-</li>
-</ul>
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      </footer>
+    </article>
 
     
-
-
-
-
-
-
   </section>
 
       </div>
